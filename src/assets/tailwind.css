@@ -1,5 +1,59 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
+
+@layer base {
+    * {
+        @apply box-border m-0 p-0;
+    }
+    body {
+        @apply font-serif
+    }
+    h1 {
+        @apply text-2xl;
+    }
+    h2 {
+        @apply text-xl;
+    }
+    h3 {
+        @apply text-lg;
+    }
+    h4 {
+        @apply text-base;
+    }
+    p {
+        @apply text-sm;
+    }
+    header {
+        @apply flex items-center justify-between mb-5;
+    }
+    button {
+        @apply rounded-md shadow;
+    }
+    button:focus {
+        @apply outline-none;
+    }
+    button:active {
+        @apply scale-95;
+    }
+    input {
+        @apply border border-gray-500 rounded px-3 py-2;
+    }
+}
+
+@layer components {
+    .container-box {
+        @apply container max-w-lg mx-auto p-6 overflow-auto border border-black rounded-md;
+    }
+    .btn {
+        @apply inline-block bg-black text-white border-none px-4 py-2 m-1 cursor-pointer no-underline text-base;
+    }
+    .btn-block {
+        @apply block w-full;
+    }
+}
+
+@layer utilities {
+    
+}
